@@ -1,28 +1,21 @@
-# workflow name
-name: main
-
-# on events
 on:
   push:
-  pull_request:
+    # Sequence of patterns matched against refs/tags
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
-# jobs to run
+name: Upload Release Asset
+
 jobs:
-  
-  # job 1: build
-  main:
-    name: Main
+  build:
+    name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
-
-      # step 1: checkout repository code
-      - name: Checkout code into workspace directory
+      - name: Checkout code
         uses: actions/checkout@v2
-
-      # step 2: run 
-      - name: Build eBook PDF (run Ibis)
-        run: docker run -it --rm -v $(pwd):/data xezpeleta/ibis build
-           
+      - name: Build project # This would actually build your project, using zip for an example artifact
+        run: |
+          zip --junk-paths my-artifact README.md
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -40,6 +33,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./export/laravel-queues-in-action-light.pdf
-          asset_name: laravel-queues-in-action-light.pdf
-          asset_content_type: application/pdf
+          asset_path: ./my-artifact.zip
+          asset_name: my-artifact.zip
+          asset_content_type: application/zip
