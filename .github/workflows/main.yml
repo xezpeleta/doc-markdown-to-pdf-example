@@ -25,11 +25,7 @@ jobs:
 
       # step 2: run 
       - name: Build eBook PDF (run Ibis)
-        run: docker run -it --rm -v /github/workspace:/data xezpeleta/ibis build
-  release:
-    name: Release
-    run-on: ubuntu-latest   
-    steps:
+        run: docker run -it --rm -v $(pwd):/data xezpeleta/ibis build
            
       - name: Create Release
         id: create_release
@@ -48,6 +44,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./my-artifact.zip
-          asset_name: my-artifact.zip
-          asset_content_type: application/zip
+          asset_path: ./export/laravel-queues-in-action-light.pdf
+          asset_name: laravel-queues-in-action-light.pdf
+          asset_content_type: application/pdf
