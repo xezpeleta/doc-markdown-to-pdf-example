@@ -14,8 +14,8 @@ on:
 jobs:
   
   # job 1: build
-  build:
-    name: Build
+  main:
+    name: Main
     runs-on: ubuntu-latest
     steps:
 
