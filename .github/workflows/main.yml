@@ -26,8 +26,12 @@ jobs:
       # step 2: run 
       - name: Build eBook PDF (run Ibis)
         run: docker run -it --rm -v /github/workspace:/data xezpeleta/ibis build
-  release:          
-    - name: Create Release
+  release:
+    name: Release
+    run-on: ubuntu-latest   
+    steps:
+           
+      - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
