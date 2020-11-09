@@ -1,0 +1,28 @@
+# workflow name
+name: main
+
+# on events
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+# jobs to run
+jobs:
+  
+  # job 1: build
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+      # step 1: checkout repository code
+      - name: Checkout code into workspace directory
+        uses: actions/checkout@v2
+
+      # step 2: run 
+      - name: Build eBook PDF (run Ibis)
+        run: docker run -it --rm -v /github/workspace:/data xezpeleta/ibis build
