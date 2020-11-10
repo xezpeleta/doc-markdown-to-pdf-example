@@ -1,6 +1,6 @@
 [![Deskargatu eLiburua](https://img.shields.io/badge/deskargatu-eBook%20PDF-blue?style=for-the-badge)](https://github.com/xezpeleta/sortu-dokumentazioa/releases/latest/download/sortu-dokumentazioa-github-erabiliz-light.pdf)
 
-# Sortu eLiburu bat Markdown erabiliz
+# Sortu eLiburu bat Markdown eta GitHub erabiliz
 eLiburu bat modu kolaboratiboan sortzeko adibide soil bat da errepositorio hau.
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) lengoaia erabiliz sortutako testu fitxategiak ondoren [eLiburu batean](https://github.com/xezpeleta/sortu-dokumentazioa/releases/latest/download/sortu-dokumentazioa-github-erabiliz-light.pdf) bihurtzen dira automatikoki, [Ibis](https://github.com/themsaid/ibis) proiektua eta GitHub Actions erabiliz.
