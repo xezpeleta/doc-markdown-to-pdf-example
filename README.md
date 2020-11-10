@@ -1,15 +1,23 @@
 [![Deskargatu eLiburua](https://img.shields.io/badge/deskargatu-eBook%20PDF-blue?style=for-the-badge)](https://github.com/xezpeleta/sortu-dokumentazioa/releases/latest/download/sortu-dokumentazioa-github-erabiliz-light.pdf)
 
 # Sortu eLiburu bat Markdown erabiliz
-eLiburu bat sortzeko adibide bat besterik ez da errepositorio hau. [Markdown](https://en.wikipedia.org/wiki/Markdown) lengoaia erabiliz sortutako fitxategiak ondoren [eLiburu batean](https://github.com/xezpeleta/sortu-dokumentazioa/releases/latest/download/sortu-dokumentazioa-github-erabiliz-light.pdf) bihurtzen dira automatikoki, [Ibis](https://github.com/themsaid/ibis) proiektua eta GitHub Actions erabiliz.
+eLiburu bat modu kolaboratiboan sortzeko adibide soil bat da errepositorio hau.
+
+[Markdown](https://en.wikipedia.org/wiki/Markdown) lengoaia erabiliz sortutako testu fitxategiak ondoren [eLiburu batean](https://github.com/xezpeleta/sortu-dokumentazioa/releases/latest/download/sortu-dokumentazioa-github-erabiliz-light.pdf) bihurtzen dira automatikoki, [Ibis](https://github.com/themsaid/ibis) proiektua eta GitHub Actions erabiliz.
 
 ## Ezaugarriak
 
-- Liburua taldelanean sortzeko aukera
-- Aldaketak modu errezean egiteko aukera
-- Bertsio kontrola, egindako aldaketen historikoa
+- Sortu edukia testu hutseko fitxategietan (Markdown erabiliz)
+- Aldaketak errez eta modu kolaboratiboan
+- Bertsio kontrola, aldaketen historikoa
 - Automatizatua, mantenurik gabekoa
-- Emaitza txukuna duen PDF bat esportatu ahal izatea
+
+Eta garrantzitsuena:
+- Emaitza PDF gisa esportatu ahal izatea
+  - Pertsonalizatutako azala jarrita
+  - Automatikoki sortutako "Eduki taula"-rekin (klikablea)
+  - Itxura aldagarria (tipografia, atzeko kolorea...)
+  - Syntax highlighting
 
 ## Nola hasi?
 
