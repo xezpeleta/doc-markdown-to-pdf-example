@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build PDFs
         run: |
-          docker run -it --rm -v ${pwd}:/data xezpeleta/ibis:latest build
+          docker run -it --rm -v ${{ GITHUB_WORKSPACE }}:/data xezpeleta/ibis:latest build
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
