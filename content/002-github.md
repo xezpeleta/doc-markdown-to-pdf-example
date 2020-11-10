@@ -1,16 +1,17 @@
-## Key Components
+# GitHub
 
->{notice} This is a sample content from [Laravel Queues in Action](https://learn-laravel-queues.com/). A book by [Mohamed Said](https://twitter.com/themsaid) the creator of Ibis.
+GitHub lankidetza garapen plataforma bat da. Azpitik Git bertsio kontrolerako sistema erabiltzen du.
 
-A queue system has 3 main components; queues, messages, and workers.
+Honi esker dokumentazioa sortu ahal izango dugu lantalde bateko kide ezberdinen artean. Gainera, software garapenean erabiltzen diren hainbat ezaugarri erabiltzeko aukera ere izango ditugu.
 
-Let's start by exploring each of these components.
-
-### Queues
-
+## GitHub erabiltzen
 >{quote} A queue is a linear data structure in which elements can be added to one end, and can only be removed from the other end.
 
+### Erabiltzaile kontua
+
 That's the definition you find in most Computer Science books, and it can be quite confusing.
+
+### Nola sortu dokumentaziorako errepositorioa
 
 Let me show you a queue in action:
 
